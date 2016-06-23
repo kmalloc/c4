@@ -20,8 +20,8 @@ int *pc, *sp, *bp, a, cycle;
 7. ENT 进入子程序,将bp压栈,基址bp指向栈顶,然后将栈顶生长[PC+1]字,作为参数传递空间
 8. ADJ 
 9. LEV 离开子程序,堆栈指针sp = bp,从堆栈中弹出基址bp,pc
-10. LI 以a为地址取int数
-11. LC 以a为地址取char
+10. LI 以a为地址取int数, 并保存到 a 寄存器上。
+11. LC 以a为地址取char, 并保存到 a 寄存器上。
 12. SI 以栈顶为地址存int数并弹栈[[sp++]]=a
 13. SC 以栈顶为地址存char并弹栈[[sp++]]=a
 14. PSH 将a压栈
